@@ -1,0 +1,600 @@
+/* Custom Fonts */
+@font-face { 
+    font-family: 'entyporegular';
+    src: url('fonts/entypo/Entypo-webfont.eot');
+    src: url('fonts/entypo/Entypo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/entypo/Entypo-webfont.woff') format('woff'),
+         url('fonts/entypo/Entypo-webfont.ttf') format('truetype'),
+         url('fonts/entypo/Entypo-webfont.svg#entyporegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'juice_regularregular';
+    src: url('fonts/juice/JUICE_Regular-webfont.eot');
+    src: url('fonts/juice/JUICE_Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/juice/JUICE_Regular-webfont.woff') format('woff'),
+         url('fonts/juice/JUICE_Regular-webfont.ttf') format('truetype'),
+         url('fonts/juice/JUICE_Regular-webfont.svg#juice_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'helsinkiregular';
+    src: url('fonts/helsinki/helsinki-webfont.eot');
+    src: url('fonts/helsinki/helsinki-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/helsinki/helsinki-webfont.woff') format('woff'),
+         url('fonts/helsinki/helsinki-webfont.ttf') format('truetype'),
+         url('fonts/helsinki/helsinki-webfont.svg#helsinkiregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '3dumbregular';
+    src: url('fonts/3dumb/3Dumb-webfont.eot');
+    src: url('fonts/3dumb/3Dumb-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/3dumb/3Dumb-webfont.woff') format('woff'),
+         url('fonts/3dumb/3Dumb-webfont.ttf') format('truetype'),
+         url('fonts/3dumb/3Dumb-webfont.svg#3dumbregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('fonts/roboto/Roboto-Regular-webfont.eot');
+    src: url('fonts/roboto/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/roboto/Roboto-Regular-webfont.woff') format('woff'),
+         url('fonts/roboto/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('fonts/roboto/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*
+ * Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2015 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      Armasen Typefaces
+ * License URL: http://www.fontspring.com/licenses/armasen/webfont
+ *
+ *
+ */
+
+@font-face {
+    font-family: 'kelsonregular';
+    src: url('fonts/kelson_regular_macroman/kelson_rg-webfont.eot');
+    src: url('fonts/kelson_regular_macroman/kelson_rg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/kelson_regular_macroman/kelson_rg-webfont.woff2') format('woff2'),
+         url('fonts/kelson_regular_macroman/kelson_rg-webfont.woff') format('woff'),
+         url('fonts/kelson_regular_macroman/kelson_rg-webfont.ttf') format('truetype'),
+         url('fonts/kelson_regular_macroman/kelson_rg-webfont.svg#kelsonregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+body {
+    margin: 0; /* Override default setting */
+    padding: 0; /* Override default setting */
+}
+
+/* Navigation Menu (overlay) */
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 1);
+    overflow-y: hidden; /* no scrolling in y-direction */
+    transition: 0.5s; /* smoother transition */
+    z-index: 150; /* over top of page */
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-family: 'juice_regularregular', Arial, monospace;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Navigation Menu (close button) */
+.closebtn { 
+    position: absolute;
+    top: 19px;
+    right: 32px;
+    font-size: 45px !important;
+}
+
+/* Navigation Menu (MENU) */
+.menu {
+    font-family: 'helsinkiregular', Arial, monospace;
+    font-size: 20px;
+    text-shadow: 2px 2px 3px #666666;
+    color: white;
+    right: 70px;
+    top: 18px;
+    cursor: default;
+    z-index: 1;
+    position: fixed;
+        /* Make elements not highlightable */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+}
+
+/* Navigation Menu (hamburger icon) */
+.hamburger {
+    font-family: 'entyporegular', Arial, monospace;
+    font-size: 50px;
+    text-shadow: 2px 2px 3px #666666;
+    color: white;
+    right: 40px;
+    top: 37px;
+    cursor: pointer;
+    z-index: 1;
+    position: fixed;
+        /* Make elements not highlightable */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+}
+
+.hamburger:hover, .hamburger:active {
+    color: rgb(242, 211, 36);
+}
+
+/* Navigation Menu (mobile scale) */
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .closebtn {
+    font-size: 40px !important;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+/* Home Page Slideshow */
+.slides { 
+        /* slideshow container */
+    object-fit: cover;
+    min-width: 100%; /* Preserve aspet ratio */
+    min-height: 100%; /* Preserve aspet ratio */
+    width: 100%;
+    display: none;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+        /* Make elements not highlightable */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+}
+
+/* Contact subpage (background image) */
+.contact {
+    background-image: url("../img/contact/Contact.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+        /* Make elements not highlightable */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+}
+
+
+/* Contact (grid) */
+.grid {
+    position: relative;
+    clear: both;
+    margin: 0 auto;
+    padding: 1em 0 4em;
+    max-width: 500px;
+    list-style: none;
+    text-align: center;
+}
+
+.grid figure {
+    position: absolute;
+    float: left;
+    margin: 0 auto;
+    top: 100px;
+    overflow: hidden;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 360px;
+    background: #3085a3;
+    text-align: center;
+    cursor: pointer;
+}
+
+.grid figure img {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    opacity: 0.8;
+}
+
+.grid figure figcaption {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+    pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+.grid figure figcaption > a {
+    z-index: 2;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+
+.grid figure h2 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+    font-family: '3dumbregular';
+}
+
+.grid figure h2 span {
+    font-weight: 800;
+    font-family: '3dumbregular';
+}
+
+.grid figure h2,
+.grid figure p {
+    margin: 0;
+}
+
+.grid figure p {
+    letter-spacing: 1px;
+    font-size: 68.5%;
+}
+
+figure.effect-julia {
+    background: rgba(108,178,255, 0.6);
+}
+
+figure.effect-julia img {
+    max-width: none;
+    height: 400px;
+    -webkit-transition: opacity 1s, -webkit-transform 1s;
+    transition: opacity 1s, transform 1s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+figure.effect-julia figcaption {
+    text-align: center;
+}
+
+figure.effect-julia h2 {
+    position: relative;
+    padding: 0.5em 0;
+}
+
+figure.effect-julia p {
+    display: inline-block;
+    margin: 0 0 0.25em;
+    padding: 0.4em 1em;
+    background: rgba(255,255,255,0.9);
+    color: #2f3238;
+    text-transform: none;
+    font-weight: 500;
+    font-size: 75%;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-400px,0,0);
+    transform: translate3d(-400px,0,0);
+}
+
+figure.effect-julia p:first-child {
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+}
+
+figure.effect-julia p:nth-of-type(2) {
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+figure.effect-julia p:nth-of-type(3) {
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+}
+
+figure.effect-julia:hover p:first-child {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+figure.effect-julia:hover p:nth-of-type(2) {
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+}
+
+figure.effect-julia:hover p:nth-of-type(3) {
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+
+figure.effect-julia:hover img {
+    opacity: 0.4;
+    -webkit-transform: scale3d(1.1,1.1,1);
+    transform: scale3d(1.1,1.1,1);
+}
+
+figure.effect-julia:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+/* AP subpage */
+.ap_container {
+    background-image: url("../img/ap/horsehead.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+        /* Make elements not highlightable */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+}
+
+.ap_title {
+    position: absolute;
+    font-family: 'kelsonregular';
+    font-size: 3.0em; 
+    width: 100%;
+    text-align: center;
+    color: rgb(255,255,255);
+    margin-bottom: 850px;
+}
+
+#ap_quote {
+    position: fixed;
+    font-family: 'kelsonregular';
+    font-size: 32px;
+    width: 100%;
+    text-align: center;
+    color: rgb(255,255,255);
+    margin-top: 200px;
+    
+}
+
+#ap_menu {
+    position: fixed;
+    width: 550px;
+    width: 100%;
+    height: 100%;
+    font-size: 27px;
+    color: rgb(255,255,255);
+  /*  font-family: Tahoma, Geneva, sans-serif; */
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 3px 2px 3px #333333;
+    margin-top: 450px;
+     
+}
+
+#ap_menu ul {
+    height: auto;
+    padding: 8px 0px;
+    margin: 0px;
+}
+
+#ap_menu li { 
+display: inline; 
+padding: 20px; 
+}
+
+
+#ap_menu a {
+    font-family: 'kelsonregular';
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 8px 8px 8px;
+}
+
+#ap_menu a:hover {
+    color: #F90;
+}
+
+/* AP calendar */
+.ap_calendar_container {
+    background-image: url("../img/calendar/ap.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+        /* Make elements not highlightable */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+}
+
+.ap_calendar_iframe_container {
+    text-align: center;
+    width: 100%;
+    padding-top: 50px;
+}
+
+/* Honors Calendar */
+.honors_calendar_container {
+    background-image: url("../img/calendar/honors.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+        /* Make elements not highlightable */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+}
+
+.honors_calendar_iframe_container {
+    text-align: center;
+    width: 100%;
+    padding-top: 50px;
+}
+
+
+/* Honors subpage */
+.honors_container {
+    background-image: url("../img/honors/galaxy.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+        /* Make elements not highlightable */
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+}
+
+.honors_title {
+    position: absolute;
+    font-family: 'kelsonregular';
+    font-size: 3.0em; 
+    width: 100%;
+    text-align: center;
+    color: rgb(255,255,255);
+    margin-bottom: 850px;
+   
+}
+
+#honors_quote {
+    position: fixed;
+    font-family: 'kelsonregular';
+    font-size: 32px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    margin-top: 200px;
+    text-shadow: 3px 2px 3px #333333;
+}
+
+#honors_menu {
+    position: fixed;
+    width: 550px;
+    width: 100%;
+    height: 100%;
+    font-size: 27px;
+    color: rgb(255,255,255);
+  /*  font-family: Tahoma, Geneva, sans-serif; */
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 3px 2px 3px #333333;
+    margin-top: 525px;
+       
+}
+
+#honors_menu ul {
+    height: auto;
+    padding: 8px 0px;
+    margin: 0px;
+}
+
+#honors_menu li { 
+display: inline; 
+padding: 20px; 
+font-family: 'kelsonregular';
+
+}
+
+
+#honors_menu a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 8px 8px 8px;
+}
+
+#honors_menu a:hover {
+    color: #F90;
+}
